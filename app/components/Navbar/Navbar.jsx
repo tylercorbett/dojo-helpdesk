@@ -12,7 +12,7 @@ export default function Navbar() {
         alt="Hytopia logo"
         width={130}
         quality={100}
-        className="mr-5"
+        className="mr-5 mt-1"
         draggable={false}
       />
       <Link
