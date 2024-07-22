@@ -23,3 +23,8 @@ body {
 .active-wide-btn {
   @apply bg-gray-600 border border-white bg-transparent border-opacity-50 text-white rounded-lg px-11 py-2 text-sm;
 }
+
+.main-header {
+  @apply font-bold text-lg text-white;
+}
+

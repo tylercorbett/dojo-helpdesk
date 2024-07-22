@@ -3,7 +3,7 @@ import React from "react";
 export default function Settings() {
   return (
     <div className="flex items-center w-full gap-4 flex-wrap my-8 border-b pb-8 border-opacity-50 border-gray-600">
-      <h2 className="font-bold text-lg text-white mr-20">Settings</h2>
+      <h2 className="main-header mr-20">Settings</h2>
       <button className="active-wide-btn">Video</button>
       <button className="wide-btn">Game</button>
       <button className="wide-btn">Interface</button>
