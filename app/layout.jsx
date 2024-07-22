@@ -21,9 +21,9 @@ export default function RootLayout({ children }) {
           <Image
             src={Background}
             alt="Background logo"
-            // layout="fill"
-            // objectFit="cover"
-            // className="w-full h-full"
+            layout="fill"
+            objectFit="cover"
+            className="w-full"
           />
         </div>
         <Navbar />
