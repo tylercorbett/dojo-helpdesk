@@ -8,7 +8,7 @@ import { UsersIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center gap-4">
+    <nav className="flex items-center gap-4 border-b border-opacity-50 border-gray-600 pb-5">
       <Image
         src={Logo}
         alt="Hytopia logo"
