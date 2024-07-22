@@ -31,10 +31,17 @@ export default function RootLayout() {
         </div>
         <Navbar />
         <Settings />
-        <LabelToolTip
-          labelText={"Display"}
-          toolTipText={"Adjust display settings here"}
-        />
+        <div className="grid grid-cols-2 gap-2">
+          <div>
+            <LabelToolTip
+              labelText={"Display"}
+              toolTipText={"Adjust display settings here"}
+            />
+          </div>
+          <div>
+            <p className="text-center">Extra settings here</p>
+          </div>
+        </div>
       </body>
     </html>
   );
