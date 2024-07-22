@@ -8,18 +8,6 @@ body {
   @apply text-gray-500 m-8;
 }
 
-/* nav styles */
-nav {
-  @apply border-b-2 border-gray-200
-    flex items-center gap-5;
-}
-nav a,
-nav span {
-  @apply text-gray-500;
-}
-nav a:hover {
-  @apply text-black;
-}
-main nav {
-  @apply border-0;
+.text-lightGray {
+  color: rgb(241 241 241);
 }

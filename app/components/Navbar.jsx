@@ -5,11 +5,33 @@ import Logo from "./HYTOPIA.svg";
 
 export default function Navbar() {
   return (
-    <nav>
-      <Image src={Logo} alt="Hytopia logo" width={100} quality={100} />
-      <Link href="/">Play</Link>
-      <Link href="/">Marketplace</Link>
-      <Link href="/">Locker</Link>
+    <nav className="flex items-center gap-4">
+      <Image
+        src={Logo}
+        alt="Hytopia logo"
+        width={130}
+        quality={100}
+        className="mr-5"
+        draggable={false}
+      />
+      <Link
+        href="/"
+        className="text-lightGray font-bold opacity-50 hover:opacity-100"
+      >
+        Play
+      </Link>
+      <Link
+        href="/"
+        className="text-lightGray font-bold opacity-50 hover:opacity-100"
+      >
+        Marketplace
+      </Link>
+      <Link
+        href="/"
+        className="text-lightGray font-bold opacity-50 hover:opacity-100"
+      >
+        Locker
+      </Link>
     </nav>
   );
 }

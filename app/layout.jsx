@@ -1,12 +1,12 @@
 import "./globals.css";
-import { Rubik } from "next/font/google";
+import { Inter } from "next/font/google";
 import Background from "../public/background.png";
 
 // components
 import Navbar from "./components/Navbar";
 import Image from "next/image";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${rubik.className}`}>
+      <body className={`${inter.className}`}>
         <div className="absolute inset-0 z-[-1]">
           <Image
             src={Background}
@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
             layout="fill"
             objectFit="cover"
             className="w-full"
+            draggable={false}
           />
         </div>
         <Navbar />
