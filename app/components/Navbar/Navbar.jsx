@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "./HYTOPIA.svg";
+import Searchbar from "../Searchbar/Searchbar";
 
 export default function Navbar() {
   return (
@@ -32,6 +33,9 @@ export default function Navbar() {
       >
         Locker
       </Link>
+      <span className="ml-12">
+        <Searchbar />
+      </span>
     </nav>
   );
 }
