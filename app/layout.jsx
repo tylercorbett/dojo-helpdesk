@@ -4,8 +4,8 @@ import Background from "../public/background.png";
 
 // components
 import Navbar from "./components/Navbar/Navbar";
-import Settings from "./components/Settings/Settings";
-import LabelToolTip from "./components/LabelToolTip/LabelToolTip";
+import SettingsNav from "./components/SettingsNav/SettingsNav";
+import SettingsContainer from "./components/SettingsContainer/SettingsContainer";
 import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,18 +30,8 @@ export default function RootLayout() {
           />
         </div>
         <Navbar />
-        <Settings />
-        <div className="grid grid-cols-2 gap-2">
-          <div>
-            <LabelToolTip
-              labelText={"Display"}
-              toolTipText={"Adjust display settings here"}
-            />
-          </div>
-          <div>
-            <p className="text-center">Extra settings here</p>
-          </div>
-        </div>
+        <SettingsNav />
+        <SettingsContainer />
       </body>
     </html>
   );
