@@ -35,7 +35,7 @@ export default function Navbar() {
       >
         Locker
       </Link>
-      <span className="ml-12">
+      <span className="ml-16">
         <Searchbar />
       </span>
       <div className="ml-auto gap-2 flex items-center">
