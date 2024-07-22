@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "./HYTOPIA.svg";
 import Searchbar from "../Searchbar/Searchbar";
+import UserSettingsIcon from "../UserSettingsIcon/UserSettingsIcon";
 import { UsersIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
@@ -41,6 +42,9 @@ export default function Navbar() {
         <button className="btn font-bold text-sm">$18,391</button>
         <button className="btn text-sm">
           <UsersIcon className="w-5 h-5 opacity-50" />
+        </button>
+        <button className="btn">
+          <UserSettingsIcon />
         </button>
       </div>
     </nav>
