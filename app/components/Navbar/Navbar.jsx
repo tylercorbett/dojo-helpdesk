@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className="ml-auto gap-2 flex items-center">
         <button className="btn font-bold text-sm">$18,391</button>
         <button className="btn text-sm">
-          <UsersIcon className="w-5 h-5" />
+          <UsersIcon className="w-5 h-5 opacity-50" />
         </button>
       </div>
     </nav>
