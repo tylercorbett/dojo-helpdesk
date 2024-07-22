@@ -36,6 +36,11 @@ export default function Navbar() {
       <span className="ml-12">
         <Searchbar />
       </span>
+      <div className="ml-auto">
+        <button className="bg-white bg-opacity-50 text-white rounded-lg px-4 py-2 font-bold text-sm">
+          $18,391
+        </button>
+      </div>
     </nav>
   );
 }

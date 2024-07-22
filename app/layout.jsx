@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <div className="absolute inset-0 z-[-1]">
+        <div className="absolute inset-0 z-[-1] bg-black">
           <Image
             src={Background}
             alt="Background logo"
