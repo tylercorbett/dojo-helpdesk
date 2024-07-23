@@ -6,6 +6,7 @@ import React from "react";
 import LabelToolTip from "../../components/LabelToolTip/LabelToolTip";
 import GraphicsSettings from "./GraphicsSettings";
 import AnaglyphSettings from "./AnaglyphSettings";
+import GUISettings from "./GUISettings";
 
 export default function SettingsContainer() {
   return (
@@ -20,6 +21,7 @@ export default function SettingsContainer() {
         <div className="flex flex-col gap-2">
           <GraphicsSettings />
           <AnaglyphSettings />
+          <GUISettings />
         </div>
       </div>
       <div>

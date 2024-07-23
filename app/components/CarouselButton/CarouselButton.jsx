@@ -8,7 +8,7 @@ export default function CarouselButton({
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const toggleValues = ["On", "Off"];
+  const toggleValues = ["Off", "On"];
   const displayValues = isToggle ? toggleValues : values;
 
   const handlePrevious = () => {
