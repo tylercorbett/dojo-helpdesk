@@ -6,6 +6,12 @@ export const grahpicsOptions = ["Fancy", "Simple", "Normal", "Wild", "Epic"];
 const graphicsDescriptionMap = {
   Fancy:
     "Fancy Graphics is a setting in which Blocks and Mobs, by default, have more realistic textures. The option was made default.",
+  Simple:
+    "Simple Graphics is a setting in which Blocks and Mobs, by default, have simple textures.",
+  Normal:
+    "Normal Graphics is a setting in which Blocks and Mobs, by default, have average textures.",
+  Wild: "Wild Graphics is a setting in which Blocks and Mobs, by default, have more crazy textures.",
+  Epic: "Epic Graphics is a setting in which Blocks and Mobs, by default, have the coolest textures.",
 };
 
 export const GraphicsSettingsDescription = ({ graphicsKey }) => {
@@ -15,7 +21,11 @@ export const GraphicsSettingsDescription = ({ graphicsKey }) => {
       <p className="my-7">The other options are: </p>
       <ul className="pl-5">
         {grahpicsOptions.map((graphicsOption) => {
-          return <li key={grahpicsOptions} className="list-disc">{graphicsOption}</li>;
+          return (
+            <li key={grahpicsOptions} className="list-disc">
+              {graphicsOption}
+            </li>
+          );
         })}
       </ul>
     </div>
