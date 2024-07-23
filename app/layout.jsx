@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import SettingsNav from "./components/SettingsNav/SettingsNav";
 import SettingsContainer from "./components/SettingsContainer/SettingsContainer";
 import Image from "next/image";
+import Footer from "./components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout() {
         <Navbar />
         <SettingsNav />
         <SettingsContainer />
+        <Footer />
       </body>
     </html>
   );
