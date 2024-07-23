@@ -1,7 +1,7 @@
 import React from "react";
 import CarouselButton from "../CarouselButton/CarouselButton";
 
-export const AnaglyphSettingsDescription = ({ value }) => {
+export const AnaglyphSettingsDescription = () => {
   return (
     <p className="my-7">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, velit

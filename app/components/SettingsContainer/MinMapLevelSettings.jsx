@@ -3,7 +3,22 @@ import React from "react";
 // components
 import RangeSelector from "../RangeSelector/RangeSelector";
 
-export default function MinMapLevelSettings() {
+export const MinMapLevelDescription = () => {
+  return (
+    <p className="my-7">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, velit
+      possimus qui, est consectetur dolore placeat dolorem provident facere
+      dolores, maxime repellat! Debitis molestias quis blanditiis odit ullam
+      mollitia doloremque!
+    </p>
+  );
+};
+
+export default function MinMapLevelSettings({ onChange }) {
+  const handleValueChange = (newValue) => {
+    onChange({ value: newValue, settingsType: "minmap levels" });
+  };
+
   return (
     <div>
       <RangeSelector
@@ -11,6 +26,7 @@ export default function MinMapLevelSettings() {
         startRangeAt={1}
         endRangeAt={4}
         defaultValue={4}
+        onChange={handleValueChange}
       />
     </div>
   );

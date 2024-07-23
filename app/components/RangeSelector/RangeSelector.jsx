@@ -9,6 +9,7 @@ export default function RangeSelector({
   endRangeAt,
   defaultValue,
   units,
+  onChange,
 }) {
   const [value, setValue] = useState(defaultValue);
   const rangeRef = useRef(null);
@@ -21,6 +22,7 @@ export default function RangeSelector({
     const newValue = event.target.value;
     setValue(newValue);
     updateBackground(newValue);
+    onChange(newValue);
   };
 
   const updateBackground = (value) => {

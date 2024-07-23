@@ -13,7 +13,9 @@ import AnaglyphSettings, {
 } from "./AnaglyphSettings";
 import GUISettings, { GUISettingsDescription } from "./GUISettings";
 import CloudSettings, { CloudSettingsDescription } from "./CloudSettings";
-import MinMapLevelSettings from "./MinMapLevelSettings";
+import MinMapLevelSettings, {
+  MinMapLevelDescription,
+} from "./MinMapLevelSettings";
 import RenderDistanceSettings from "./RenderDistanceSettings";
 
 export default function SettingsContainer() {
@@ -33,6 +35,9 @@ export default function SettingsContainer() {
     ),
     "GUI scale": <GUISettingsDescription graphicsKey={activeSetting.value} />,
     clouds: <CloudSettingsDescription graphicsKey={activeSetting.value} />,
+    "minmap levels": (
+      <MinMapLevelDescription graphicsKey={activeSetting.value} />
+    ),
   };
 
   return (
