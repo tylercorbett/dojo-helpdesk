@@ -7,6 +7,7 @@ import LabelToolTip from "../../components/LabelToolTip/LabelToolTip";
 import GraphicsSettings from "./GraphicsSettings";
 import AnaglyphSettings from "./AnaglyphSettings";
 import GUISettings from "./GUISettings";
+import CloudSettings from "./CloudSettings";
 
 export default function SettingsContainer() {
   return (
@@ -23,11 +24,15 @@ export default function SettingsContainer() {
           <AnaglyphSettings />
           <GUISettings />
         </div>
-        <div>
+        <div className="mb-4">
           <LabelToolTip
             labelText={"Graphics"}
             toolTipText={"Adjust graphics settings here"}
           />
+        </div>
+        <div className="flex flex-col gap-2 mb-8">
+          <CloudSettings />
+          <GUISettings />
         </div>
       </div>
       <div>
