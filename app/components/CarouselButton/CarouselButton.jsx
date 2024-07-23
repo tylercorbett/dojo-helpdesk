@@ -16,8 +16,8 @@ export default function CarouselButton({ values, onChange, label }) {
   };
 
   return (
-    <div className="flex w-full items-center gap-4 p-3 bg-gray-600 bg-opacity-50 rounded-lg">
-      <p className="font-bold text-white mr-36">{label}</p>
+    <div className="flex w-full items-center gap-4 p-3 bg-gray-600 bg-opacity-50 rounded-lg overflow-hidden">
+      <p className="font-bold text-white w-96">{label}</p>
       <div className="flex items-center justify-between justify-self-end w-full">
         <button onClick={handlePrevious} className="carousel-button-control">
           &lt;
