@@ -7,6 +7,12 @@ export const GUISettingsDescription = ({ graphicsKey }) => {
   return (
     <div className="my-7">
       <p>{guiOptions[graphicsKey]}</p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos
+        iste nobis odit sint vel ipsum? Asperiores iusto ex nihil optio
+        temporibus, ratione deserunt cupiditate corporis aspernatur id fugit
+        deleniti accusamus!
+      </p>
       <p className="my-7">The other options are: </p>
       <ul className="pl-5">
         {guiOptions.map((guiOption) => {
