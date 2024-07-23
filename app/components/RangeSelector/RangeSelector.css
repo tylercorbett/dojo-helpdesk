@@ -1,0 +1,72 @@
+/* RangeSelector.css */
+
+.range-input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    black 50%,
+    black 100%
+  );
+  outline: none;
+  border-radius: 0.4rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.25rem;
+  height: 2.3rem;
+  background: #565655;
+  cursor: pointer;
+  border-radius: 40%;
+  position: relative;
+  top: -0.1rem;
+}
+
+.range-input::-moz-range-thumb {
+  width: 1.25rem;
+  height: 2.3rem;
+  background: #565655;
+  cursor: pointer;
+  border-radius: 40%;
+  position: relative;
+  top: 0.2rem;
+}
+
+.range-input::-ms-thumb {
+  width: 1.25rem;
+  height: 2.3rem;
+  background: #565655;
+  cursor: pointer;
+  border-radius: 40%;
+  position: relative;
+  top: 0.2rem;
+}
+
+.range-input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2rem;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.range-input::-moz-range-track {
+  width: 100%;
+  height: 2rem;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.range-input::-ms-track {
+  width: 100%;
+  height: 2rem;
+  background: transparent;
+  border-radius: 4px;
+  border: none;
+  color: transparent;
+}
