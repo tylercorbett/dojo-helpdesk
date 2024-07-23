@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useState } from "react";
+import './CarouselButton.css';
 
 export default function CarouselButton({
   values,
