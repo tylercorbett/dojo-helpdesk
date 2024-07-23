@@ -14,9 +14,11 @@ import AnaglyphSettings, {
 import GUISettings, { GUISettingsDescription } from "./GUISettings";
 import CloudSettings, { CloudSettingsDescription } from "./CloudSettings";
 import MinMapLevelSettings, {
-  MinMapLevelDescription,
+  MinMapLevelSettingsDescription,
 } from "./MinMapLevelSettings";
-import RenderDistanceSettings from "./RenderDistanceSettings";
+import RenderDistanceSettings, {
+  RenderDistanceSettingsDescription,
+} from "./RenderDistanceSettings";
 
 export default function SettingsContainer() {
   const [activeSetting, setActiveSetting] = useState({
@@ -36,7 +38,10 @@ export default function SettingsContainer() {
     "GUI scale": <GUISettingsDescription graphicsKey={activeSetting.value} />,
     clouds: <CloudSettingsDescription graphicsKey={activeSetting.value} />,
     "minmap levels": (
-      <MinMapLevelDescription graphicsKey={activeSetting.value} />
+      <MinMapLevelSettingsDescription graphicsKey={activeSetting.value} />
+    ),
+    "render distance": (
+      <RenderDistanceSettingsDescription graphicsKey={activeSetting.value} />
     ),
   };
 

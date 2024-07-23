@@ -3,7 +3,7 @@ import React from "react";
 // components
 import RangeSelector from "../RangeSelector/RangeSelector";
 
-export const MinMapLevelDescription = () => {
+export const MinMapLevelSettingsDescription = () => {
   return (
     <p className="my-7">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, velit
