@@ -10,7 +10,11 @@ export default function GraphicsSettings() {
 
   return (
     <div className="flex items-center gap-4">
-      <CarouselButton values={options} onChange={handleValueChange} />
+      <CarouselButton
+        values={options}
+        onChange={handleValueChange}
+        label={"Graphics"}
+      />
     </div>
   );
 }

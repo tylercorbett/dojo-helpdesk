@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function CarouselButton({ values, onChange }) {
+export default function CarouselButton({ values, onChange, label }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevious = () => {
@@ -16,20 +16,19 @@ export default function CarouselButton({ values, onChange }) {
   };
 
   return (
-    <div className="flex items-center gap-4">
-      <button
-        onClick={handlePrevious}
-        className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-      >
-        &lt;
-      </button>
-      <div className="text-white font-bold">{values[currentIndex]}</div>
-      <button
-        onClick={handleNext}
-        className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-      >
-        &gt;
-      </button>
+    <div className="flex w-full items-center gap-4 p-3 bg-gray-600 bg-opacity-50 rounded-lg">
+      <p className="font-bold text-white mr-36">{label}</p>
+      <div className="flex items-center justify-between justify-self-end w-full">
+        <button onClick={handlePrevious} className="carousel-button-control">
+          &lt;
+        </button>
+        <div className="text-black font-bold text-center w-3/4 mx-2 rounded-lg bg-white py-2">
+          {values[currentIndex]}
+        </div>
+        <button onClick={handleNext} className="carousel-button-control">
+          &gt;
+        </button>
+      </div>
     </div>
   );
 }
