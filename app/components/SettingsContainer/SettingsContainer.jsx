@@ -1,10 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import { grahpicsOptions } from "./GraphicsSettings";
 
 // components
 import LabelToolTip from "../../components/LabelToolTip/LabelToolTip";
-import GraphicsSettings from "./GraphicsSettings";
+import GraphicsSettings, {
+  GraphicsSettingsDescription,
+} from "./GraphicsSettings";
 import AnaglyphSettings from "./AnaglyphSettings";
 import GUISettings from "./GUISettings";
 import CloudSettings from "./CloudSettings";
@@ -12,8 +15,21 @@ import MinMapLevelSettings from "./MinMapLevelSettings";
 import RenderDistanceSettings from "./RenderDistanceSettings";
 
 export default function SettingsContainer() {
+  const [activeSetting, setActiveSetting] = useState({
+    value: grahpicsOptions[0],
+    settingsType: "graphics",
+  });
+
+  const handleSettingChanged = (newActiveSetting) => {
+    setActiveSetting(newActiveSetting);
+  };
+
+  const settingsDescriptionMap = {
+    graphics: <GraphicsSettingsDescription graphicsKey={activeSetting.value} />,
+  };
+
   return (
-    <div className="grid grid-cols-2 gap-2 mb-20">
+    <div className="grid grid-cols-2 gap-3 mb-20">
       <div>
         <div className="mb-4">
           <LabelToolTip
@@ -22,7 +38,7 @@ export default function SettingsContainer() {
           />
         </div>
         <div className="flex flex-col gap-2 mb-8">
-          <GraphicsSettings />
+          <GraphicsSettings onChange={handleSettingChanged} />
           <AnaglyphSettings />
           <GUISettings />
         </div>
@@ -39,8 +55,12 @@ export default function SettingsContainer() {
           <GUISettings />
         </div>
       </div>
-      <div>
-        <p className="text-center">Extra settings here</p>
+      <div className="my-11 rounded-lg h-fit p-5 border border-opacity-50 border-gray-600">
+        <h4 className="text-white font-semibold text-lg">
+          <span className="capitalize">{activeSetting.settingsType}: </span>
+          {activeSetting.value}
+        </h4>
+        {settingsDescriptionMap[activeSetting.settingsType]}
       </div>
     </div>
   );
