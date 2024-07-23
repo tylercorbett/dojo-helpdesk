@@ -18,10 +18,16 @@ export default function SettingsContainer() {
             toolTipText={"Adjust display settings here"}
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 mb-8">
           <GraphicsSettings />
           <AnaglyphSettings />
           <GUISettings />
+        </div>
+        <div>
+          <LabelToolTip
+            labelText={"Graphics"}
+            toolTipText={"Adjust graphics settings here"}
+          />
         </div>
       </div>
       <div>
