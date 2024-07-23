@@ -8,8 +8,10 @@ import LabelToolTip from "../../components/LabelToolTip/LabelToolTip";
 import GraphicsSettings, {
   GraphicsSettingsDescription,
 } from "./GraphicsSettings";
-import AnaglyphSettings from "./AnaglyphSettings";
-import GUISettings from "./GUISettings";
+import AnaglyphSettings, {
+  AnaglyphSettingsDescription,
+} from "./AnaglyphSettings";
+import GUISettings, { GUISettingsDescription } from "./GUISettings";
 import CloudSettings from "./CloudSettings";
 import MinMapLevelSettings from "./MinMapLevelSettings";
 import RenderDistanceSettings from "./RenderDistanceSettings";
@@ -26,6 +28,10 @@ export default function SettingsContainer() {
 
   const settingsDescriptionMap = {
     graphics: <GraphicsSettingsDescription graphicsKey={activeSetting.value} />,
+    "3d anaglyph": (
+      <AnaglyphSettingsDescription graphicsKey={activeSetting.value} />
+    ),
+    "GUI scale": <GUISettingsDescription graphicsKey={activeSetting.value} />,
   };
 
   return (
@@ -39,8 +45,8 @@ export default function SettingsContainer() {
         </div>
         <div className="flex flex-col gap-2 mb-8">
           <GraphicsSettings onChange={handleSettingChanged} />
-          <AnaglyphSettings />
-          <GUISettings />
+          <AnaglyphSettings onChange={handleSettingChanged} />
+          <GUISettings onChange={handleSettingChanged} />
         </div>
         <div className="mb-4">
           <LabelToolTip
@@ -49,10 +55,10 @@ export default function SettingsContainer() {
           />
         </div>
         <div className="flex flex-col gap-2 mb-8">
-          <CloudSettings />
-          <MinMapLevelSettings />
-          <RenderDistanceSettings />
-          <GUISettings />
+          <CloudSettings onChange={handleSettingChanged} />
+          <MinMapLevelSettings onChange={handleSettingChanged} />
+          <RenderDistanceSettings onChange={handleSettingChanged} />
+          <GUISettings onChange={handleSettingChanged} />
         </div>
       </div>
       <div className="my-11 rounded-lg h-fit p-5 border border-opacity-50 border-gray-600">
