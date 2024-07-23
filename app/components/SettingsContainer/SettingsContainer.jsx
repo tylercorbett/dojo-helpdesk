@@ -8,6 +8,7 @@ import GraphicsSettings from "./GraphicsSettings";
 import AnaglyphSettings from "./AnaglyphSettings";
 import GUISettings from "./GUISettings";
 import CloudSettings from "./CloudSettings";
+import MinMapLevelSettings from "./MinMapLevelSettings";
 
 export default function SettingsContainer() {
   return (
@@ -32,6 +33,7 @@ export default function SettingsContainer() {
         </div>
         <div className="flex flex-col gap-2 mb-8">
           <CloudSettings />
+          <MinMapLevelSettings />
           <GUISettings />
         </div>
       </div>
