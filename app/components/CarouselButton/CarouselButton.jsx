@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import './CarouselButton.css';
+import "./CarouselButton.css";
 
 export default function CarouselButton({
   values,
@@ -29,7 +29,10 @@ export default function CarouselButton({
   };
 
   return (
-    <div className="flex w-full items-center gap-4 p-3 border border-gray-600 border-opacity-50 bg-opacity-50 rounded-lg overflow-hidden bg:transparent hover:bg-gray-600 hover:bg-opacity-50 hover:cursor-pointer">
+    <div
+      onClick={() => onChange(displayValues[currentIndex])}
+      className="flex w-full items-center gap-4 p-3 border border-gray-600 border-opacity-50 bg-opacity-50 rounded-lg overflow-hidden bg:transparent hover:bg-gray-600 hover:bg-opacity-50 hover:cursor-pointer"
+    >
       <p className="font-bold text-white w-96">{label}</p>
       <div className="flex items-center justify-between justify-self-end w-full">
         <button onClick={handlePrevious} className="carousel-button-control">
