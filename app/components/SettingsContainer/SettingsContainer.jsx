@@ -13,7 +13,7 @@ import RenderDistanceSettings from "./RenderDistanceSettings";
 
 export default function SettingsContainer() {
   return (
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid grid-cols-2 gap-2 mb-20">
       <div>
         <div className="mb-4">
           <LabelToolTip
