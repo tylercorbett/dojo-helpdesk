@@ -33,7 +33,7 @@ export default function SettingsContainer() {
         </div>
         <div className="flex flex-col gap-2 mb-8">
           <CloudSettings />
-          <MinMapLevelSettings />
+          <MinMapLevelSettings  />
           <GUISettings />
         </div>
       </div>
