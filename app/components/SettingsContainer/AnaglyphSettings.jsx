@@ -7,7 +7,7 @@ export default function AnaglyphSettings() {
   };
 
   return (
-    <div className="flex items-center gap-4">
+    <div>
       <CarouselButton
         isToggle
         onChange={handleValueChange}

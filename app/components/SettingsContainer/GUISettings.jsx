@@ -9,7 +9,7 @@ export default function GUISettings() {
   };
 
   return (
-    <div className="flex items-center gap-4">
+    <div>
       <CarouselButton
         values={options}
         onChange={handleValueChange}

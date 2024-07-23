@@ -8,6 +8,7 @@ export default function RangeSelector({
   startRangeAt,
   endRangeAt,
   defaultValue,
+  units,
 }) {
   const [value, setValue] = useState(defaultValue);
 
@@ -34,7 +35,7 @@ export default function RangeSelector({
       <div className="flex items-center justify-between justify-self-end w-full">
         <div className="relative font-bold text-center w-full rounded-lg py-2 text-white">
           <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-            {value}
+            {value} {units}
           </div>
           <input
             type="range"
