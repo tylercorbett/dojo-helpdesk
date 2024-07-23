@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 
-export default function CarouselButton({ values, onChange, label }) {
+export default function CarouselButton({
+  values,
+  onChange,
+  label,
+  isToggle = false,
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const toggleValues = ["On", "Off"];
+  const displayValues = isToggle ? toggleValues : values;
+
   const handlePrevious = () => {
-    const newIndex = currentIndex === 0 ? values.length - 1 : currentIndex - 1;
+    const newIndex =
+      currentIndex === 0 ? displayValues.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
-    onChange(values[newIndex]);
+    onChange(displayValues[newIndex]);
   };
 
   const handleNext = () => {
-    const newIndex = currentIndex === values.length - 1 ? 0 : currentIndex + 1;
+    const newIndex =
+      currentIndex === displayValues.length - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
-    onChange(values[newIndex]);
+    onChange(displayValues[newIndex]);
   };
 
   return (
@@ -22,8 +32,14 @@ export default function CarouselButton({ values, onChange, label }) {
         <button onClick={handlePrevious} className="carousel-button-control">
           &lt;
         </button>
-        <div className="text-black font-bold text-center w-3/4 mx-2 rounded-lg bg-white py-2">
-          {values[currentIndex]}
+        <div
+          className={`font-bold text-center w-3/4 mx-2 rounded-lg py-2 ${
+            isToggle && displayValues[currentIndex] === "Off"
+              ? "bg-black"
+              : "text-black bg-white"
+          }`}
+        >
+          {displayValues[currentIndex]}
         </div>
         <button onClick={handleNext} className="carousel-button-control">
           &gt;

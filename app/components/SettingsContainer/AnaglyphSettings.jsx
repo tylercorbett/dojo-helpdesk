@@ -11,7 +11,7 @@ export default function AnaglyphSettings() {
   return (
     <div className="flex items-center gap-4">
       <CarouselButton
-        values={options}
+        isToggle
         onChange={handleValueChange}
         label={"3d Anaglyph"}
       />
