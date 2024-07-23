@@ -12,7 +12,7 @@ import AnaglyphSettings, {
   AnaglyphSettingsDescription,
 } from "./AnaglyphSettings";
 import GUISettings, { GUISettingsDescription } from "./GUISettings";
-import CloudSettings from "./CloudSettings";
+import CloudSettings, { CloudSettingsDescription } from "./CloudSettings";
 import MinMapLevelSettings from "./MinMapLevelSettings";
 import RenderDistanceSettings from "./RenderDistanceSettings";
 
@@ -32,6 +32,7 @@ export default function SettingsContainer() {
       <AnaglyphSettingsDescription graphicsKey={activeSetting.value} />
     ),
     "GUI scale": <GUISettingsDescription graphicsKey={activeSetting.value} />,
+    clouds: <CloudSettingsDescription graphicsKey={activeSetting.value} />,
   };
 
   return (
