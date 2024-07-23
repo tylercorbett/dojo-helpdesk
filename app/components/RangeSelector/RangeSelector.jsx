@@ -32,8 +32,10 @@ export default function RangeSelector({
     <div className="flex w-full items-center gap-4 p-3 border border-gray-600 border-opacity-50 bg-opacity-50 rounded-lg overflow-hidden bg:transparent hover:cursor-pointer">
       <p className="font-bold text-white w-96">{label}</p>
       <div className="flex items-center justify-between justify-self-end w-full">
-        <div className="font-bold text-center w-full rounded-lg py-2 text-white">
-          {value}
+        <div className="relative font-bold text-center w-full rounded-lg py-2 text-white">
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+            {value}
+          </div>
           <input
             type="range"
             min={startRangeAt}
